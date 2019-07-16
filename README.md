@@ -18,6 +18,8 @@ This project will rely on two datasets drawn from NYC Open Data
 
 The purpose of this project is to build a database which will hold New York City crime statistics and New York City business openings. That way the end user would be able to easily extract and analyze information related to the impact of crime on business development.
 
+We will be extracting the data from CSVs, cleaning and manipulating, and loading to Postgres database.
+
 Suggested data columns are
 
 Crime
@@ -35,4 +37,6 @@ Business Licenses
 * Lat
 * Long
 * Borough
+
+
 
