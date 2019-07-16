@@ -21,18 +21,18 @@ The purpose of this project is to build a database which will hold New York City
 Suggested data columns are
 
 Crime
-*Date of Report
-*Offesnse Description
-*Police Report Description
-*Borough
-*Lat
-*Long
+* Date of Report
+* Offesnse Description
+* Police Report Description
+* Borough
+* Lat
+* Long
 
 Business Licenses
-*Date of License Creation
-*Industry
-*Address
-*Lat
-*Long
-*Borough
+* Date of License Creation
+* Industry
+* Address
+* Lat
+* Long
+* Borough
 
