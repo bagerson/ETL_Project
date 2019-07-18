@@ -1,32 +1,24 @@
---ETL PROJECT
---BEN GERSON
---ALEX BURSTIN
-
---Table data for NYC Business Licenses
---Table data for NYPD Complaint information
-
---DROP TABLE licenses
-
+--DROP TABLE licenses;
+--DROP TABLE complaints;
 CREATE TABLE licenses (
-	id SERIAL PRIMARY KEY,
-	dca_license_number INTEGER,
-	license_expiration_date DATE,
+	--id SERIAL PRIMARY KEY,
+	dca_license_number VARCHAR,
+	license_expiration_date VARCHAR,
 	license_status VARCHAR,
-	license_creation_date DATE,
+	license_creation_date VARCHAR,
 	industry VARCHAR,
 	address_building VARCHAR,
 	address_street VARCHAR,
-	address_zip INT,
+	address_zip VARCHAR,
 	address_borough VARCHAR,
-	borough_code INTEGER,
+	borough_code VARCHAR,
 	latitude VARCHAR,
 	longitude  VARCHAR
-	
 );
 
 CREATE TABLE complaints (
-	id SERIAL PRIMARY KEY,
-	complaint_fr_date DATE,
+	--id SERIAL PRIMARY KEY,
+	complaint_fr_date VARCHAR,
 	offense_desc VARCHAR,
 	law_cat_code VARCHAR,
 	boro_name VARCHAR,
@@ -36,5 +28,4 @@ CREATE TABLE complaints (
 	susp_sex VARCHAR,
 	latitude VARCHAR,
 	longitude  VARCHAR
-
 );
