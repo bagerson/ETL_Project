@@ -61,6 +61,9 @@ As discussed above, our decision was to ultimately leave the data tables as "com
 Alternative Production Table ERD: 
 ![alt text](https://github.com/bagerson/ETL_Project/blob/master/ERD%20diagram.png)
 
-Ultimately we decided against this approach to ensure end user flexibility.
+However, given that each smaller table still contained the same number of rows, any gains in efficiency were likely offset by having to perform joins on each table.
 
+## Future Updates
+
+Future considerations include exception handling, progress monitoring for loading large CSV files, and data type changes (for instance, dates are currently stored as VARCHAR, could be converted to DATE in the data table when inserted or by the end user).
 
