@@ -50,6 +50,8 @@ Data for this project transformed primarily by removing columns which are unlike
 
 As a team, we decided not to perform aggregate functions on the existing data tables.  The advantage of performing an aggreagete function (for example, groupby) at the transformaiton stage would have been to reduce the size (number of rows) of the data tables.  However, because the production database is to be used to track the change in crime complaints and DCA business licenses, grouping would lead to a loss of resolution.  For example, multiple crime complaints and multiple business licenses may be issued on the same date.  Grouping would give a count, but remove the type of license or crime reported.  Likewise, grouping by type may reduce the resolution of the date.  The decision was made to leave the data table largely intact so that end user queries could be more flexible.
 
+Because the NYPD complaint dataset includes only lat/long and not zip, the columns must be converted by reverse geocoding.  As a design consideration, calling the google geocoding API 6.5m times is time consuming and expensive.  With the code in place, the end user can call the geocode API to derive zip codes on a much smaller scale.
+
 ## Production Database
 
 We decided to use a relational database where the complaints table and license table can be joined on the date field.
